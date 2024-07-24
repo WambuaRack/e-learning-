@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Course - EduQuest</title>
+<style>
+  :root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f39c12;
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+    --white: #ffffff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  header {
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin-left: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: var(--primary-color);
+  }
+  
+  main {
+    padding-top: 80px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .module-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .module-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .module-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .module-info {
+    padding: 1rem;
+  }
+  
+  .module-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+  }
+  
+  .module-description {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .progress {
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+  }
+  
+  .start-btn {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .start-btn:hover {
+    background-color: #3a7bd5;
+  }
+  
+  footer {
+    background-color: #333;
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <div class="logo">EduQuest</div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Python Course</h1>
+    
+    <div class="module-grid">
+      <!-- Module 1 -->
+      <div class="module-card" id="module-1">
+        <div class="module-info">
+          <h3 class="module-title">Module 1: Introduction to Python</h3>
+          <p class="module-description">Learn the basics of Python programming, including variables, data types, and simple operations.</p>
+          <div class="progress">
+            <div class="progress-bar" id="progress-bar-1"></div>
+          </div>
+          <button class="start-btn" onclick="startModule(1)">Start Module</button>
+        </div>
+      </div>
+
+      <!-- Module 2 -->
+      <div class="module-card" id="module-2" style="opacity: 0.5; pointer-events: none;">
+        <div class="module-info">
+          <h3 class="module-title">Module 2: Control Structures</h3>
+          <p class="module-description">Understand how to use loops and conditionals to control the flow of your program.</p>
+          <div class="progress">
+            <div class="progress-bar" id="progress-bar-2"></div>
+          </div>
+          <button class="start-btn" onclick="startModule(2)" disabled>Complete Previous Module</button>
+        </div>
+      </div>
+
+      <!-- Module 3 -->
+      <div class="module-card" id="module-3" style="opacity: 0.5; pointer-events: none;">
+        <div class="module-info">
+          <h3 class="module-title">Module 3: Functions and Modules</h3>
+          <p class="module-description">Learn to create reusable code with functions and organize your code with modules.</p>
+          <div class="progress">
+            <div class="progress-bar" id="progress-bar-3"></div>
+          </div>
+          <button class="start-btn" onclick="startModule(3)" disabled>Complete Previous Module</button>
+        </div>
+      </div>
+
+      <!-- Module 4 -->
+      <div class="module-card" id="module-4" style="opacity: 0.5; pointer-events: none;">
+        <div class="module-info">
+          <h3 class="module-title">Module 4: Advanced Topics</h3>
+          <p class="module-description">Dive into more advanced topics such as file handling, exceptions, and libraries.</p>
+          <div class="progress">
+            <div class="progress-bar" id="progress-bar-4"></div>
+          </div>
+          <button class="start-btn" onclick="startModule(4)" disabled>Complete Previous Module</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 EduQuest. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Array to track the progress of each module
+    let progress = [0, 0, 0, 0];
+
+    // Function to start a module
+    function startModule(moduleNumber) {
+      // Simulate module completion
+      alert('You have started Module ' + moduleNumber + '. Complete the exercises and quizzes.');
+
+      // Update the progress of the module
+      progress[moduleNumber - 1] = 100;
+      document.getElementById('progress-bar-' + moduleNumber).style.width = '100%';
+
+      // Unlock the next module if the current one is completed
+      if (moduleNumber < progress.length) {
+        unlockModule(moduleNumber + 1);
+      }
+
+      // Check if all modules are completed for certificate generation
+      if (progress.every(val => val === 100)) {
+        generateCertificate();
+      }
+    }
+
+    // Function to unlock the next module
+    function unlockModule(nextModuleNumber) {
+      const nextModule = document.getElementById('module-' + nextModuleNumber);
+      nextModule.style.opacity = '1';
+      nextModule.style.pointerEvents = 'auto';
+      nextModule.querySelector('.start-btn').textContent = 'Start Module';
+      nextModule.querySelector('.start-btn').disabled = false;
+    }
+
+    // Function to generate a certificate link
+    function generateCertificate() {
+      alert('Congratulations! You have completed the Python course. A certificate link is available.');
+      const certificateLink = document.createElement('a');
+      certificateLink.href = 'certificate.html';
+      certificateLink.textContent = 'Download Certificate';
+      certificateLink.style.display = 'block';
+      certificateLink.style.textAlign = 'center';
+      certificateLink.style.marginTop = '2rem';
+      certificateLink.style.backgroundColor = 'var(--secondary-color)';
+      certificateLink.style.color = 'var(--white)';
+      certificateLink.style.padding = '1rem';
+      certificateLink.style.textDecoration = 'none';
+      certificateLink.style.borderRadius = '4px';
+      certificateLink.style.transition = 'background-color 0.3s ease';
+      certificateLink.onmouseover = () => certificateLink.style.backgroundColor = '#e67e22';
+      certificateLink.onmouseout = () => certificateLink.style.backgroundColor = 'var(--secondary-color)';
+      document.querySelector('main').appendChild(certificateLink);
+    }
+  </script>
+</body>
+</html>

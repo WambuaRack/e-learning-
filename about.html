@@ -1,0 +1,317 @@
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About EduQuest - Empowering Learners Worldwide</title>
+<style>
+  :root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f39c12;
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+    --white: #ffffff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  header {
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin-left: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: var(--primary-color);
+  }
+  
+  main {
+    padding-top: 80px;
+  }
+  
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/random/1600x900/?education') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+  }
+  
+  .hero-content {
+    max-width: 800px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #3a7bd5;
+  }
+  
+  .about-section {
+    padding: 4rem 0;
+  }
+  
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .about-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .about-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .about-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .about-card p {
+    font-size: 0.9rem;
+  }
+  
+  .testimonials {
+    background-color: var(--white);
+    padding: 4rem 0;
+  }
+  
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .testimonial {
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonial p {
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonial-author {
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  footer {
+    background-color: #333;
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <div class="logo">EduQuest</div>
+        <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>About EduQuest</h1>
+        <p>Empowering learners worldwide with accessible, high-quality education</p>
+        <a href="/courses" class="cta-button">Explore Our Courses</a>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Our Mission</h3>
+            <p>At EduQuest, our mission is to break down barriers to education and provide learners around the world with access to high-quality, affordable courses. We believe that everyone deserves the opportunity to learn, grow, and achieve their goals, regardless of their background or circumstances.</p>
+          </div>
+          <div class="about-card">
+            <h3>Our Vision</h3>
+            <p>We envision a world where education knows no boundaries. Our goal is to create a global community of lifelong learners, empowered with the knowledge and skills they need to succeed in an ever-changing world. Through innovation and collaboration, we strive to make learning engaging, accessible, and transformative.</p>
+          </div>
+          <div class="about-card">
+            <h3>Our Values</h3>
+            <p>
+              - Excellence: We are committed to delivering the highest quality education.<br>
+              - Innovation: We continuously seek new ways to improve the learning experience.<br>
+              - Inclusivity: We welcome learners from all backgrounds and abilities.<br>
+              - Empowerment: We believe in the transformative power of education to change lives.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <h2>What Our Students Say</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sarah M." width="80" height="80">
+            <p>"EduQuest has completely transformed my career. The courses are engaging, and the instructors are top-notch. I've gained skills that I use every day in my job."</p>
+            <span class="testimonial-author">- Sarah M., Web Developer</span>
+          </div>
+          <div class="testimonial">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John D." width="80" height="80">
+            <p>"The flexibility of EduQuest's platform allowed me to learn at my own pace while working full-time. It's been an incredible journey of growth and discovery."</p>
+            <span class="testimonial-author">- John D., Data Analyst</span>
+          </div>
+          <div class="testimonial">
+            <img src="https://randomuser.me/api/portraits/women/95.jpg" alt="Emma L." width="80" height="80">
+            <p>"As a lifelong learner, I've tried many online platforms, but EduQuest stands out for its quality content and supportive community. It's more than just courses; it's a learning experience."</p>
+            <span class="testimonial-author">- Emma L., Entrepreneur</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 EduQuest. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Animate elements on scroll
+    const animateOnScroll = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.about-card, .testimonial').forEach(el => {
+      animateOnScroll.observe(el);
+    });
+
+    // Lazy loading for images
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const image = entry.target;
+            image.src = image.dataset.src;
+            imageObserver.unobserve(image);
+          }
+        });
+      });
+
+      document.querySelectorAll('img[data-src]').forEach(img => imageObserver.observe(img));
+    }
+  </script>
+</body>
+</html>
